@@ -19,8 +19,8 @@
 
 
 body {
-    /*background: url(https://media.giphy.com/media/kxEkARh2ox104/giphy.gif);*/
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgb(45, 236, 204) 0%, rgb(192, 190, 216) 96%);
+    background: url(https://media.giphy.com/media/kxEkARh2ox104/giphy.gif);
+   /* background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgb(45, 236, 204) 0%, rgb(192, 190, 216) 96%);*/
     height: 100vh;
     
   }
