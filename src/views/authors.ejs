@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%=title%></title>
     <link rel="icon" href="/images/icon.png" type="image/gif" sizes="32*32">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/style2.css">
    
 </head>
@@ -12,103 +13,60 @@
   <div class="back-gradient justify-content-center text-center">
   <nav class="navbar navbar-expand-lg navbar-light bg-dark">
     <nav class="navbar navbar-light bg-dark navbar-dark">
-                        <a class="navbar-brand" href="">
-                       <img src="/images/icon.png" width="30" height="30"class="d-inline-block align-top"alt="">LIBRARY MANAGEMENT</a>
+              <a class="navbar-brand" href="">
+              <img src="/images/icon.png" width="40" height="40"class="d-inline-block align-top"alt="">LIBRARY MANAGEMENT</a>
     </nav>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                   <span class="navbar-toggler-icon"></span></button>
-                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  </div>
     </nav>
-  
-
     <nav class="navbar navbar-expand-lg navbar-dark bg-info">
-			<div id="navbar" class="container-fluid">
-				<div class="container nav-fill w-100">
-					
-						<button class="navbar-toggler" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-							<span class="navbar-toggler-icon"></span>
-						</button>
-						<div class="collapse navbar-collapse" id="navbarContent">
-							<ul class="navbar-nav nav-fill w-100">
-								<li class="nav-item">
-									<a class="nav-link" href="./home.html" role="button" class="btn btn-default">Home</a>
-                </li>
+      <div id="navbar" class="container-fluid">
+        <div class="container nav-fill w-100">
+      
+          <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+              <ul class="navbar-nav nav-fill w-100">
                 <li class="nav-item">
-									<a class="nav-link active" href="./authors.html" role="button" class="btn btn-default">Authors</a>
+                  <a class="nav-link active" href="/home" role="button" class="btn btn-default">Home</a>
+              </li>
+                <%for(i=0;i<nav.length;i++){%>
+                 
+                 <li class="nav-item">
+                    <a class="nav-link" href="<%=nav[i].link%>" role="button" class="btn btn-default"><%=nav[i].name%></a>
                 </li>
-                <li class="nav-item">
-									<a class="nav-link " href="./books.html" role="button" class="btn btn-default">Books</a>
-                </li>    
-  </ul>
-            </div>
-             </div>
+                <%}%>    
+           </ul>
+         </div>
       </div>
-      </nav>
+  </div>
+  </nav> 
+
+    
       
  
 <div class="container">
   <h1>AUTHORS</h1>
 </div>
 <div class="container">
-  <div class="card-deck">
-    <div class="card mycard1">
-      <img src="../images/img13.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">JANE AUSTEN</h5>
-        <p class="card-text">Jane Austen was an English novelist known primarily for her six major novels, which interpret, critique and comment upon the British landed gentry at the end of the 18th century. Austen's plots often explore the dependence of women on marriage in the pursuit of favourable social standing and economic security.While Austen received some accolades for her works while still alive, with her first three novels garnering critical attention and increasing financial reward, it was not until after her death that her brother Henry revealed to the public that she was an author.</p>
-        <a href="https://en.wikipedia.org/wiki/Jane_Austen" class="btn btn-primary">Read More</a>
-      </div>
+  <%for(i=0;i<authors.length;i++){%> 
+  <div class="mycard1">
+        <div class="card mb-12" style="max-width: 100%;">
+         <div class="row no-gutters">
+        <div class="col-md-3">
+        <img src="/images/<%=authors[i].img%>" class="card-img rounded-circle"width="600%"height="100%" alt="...">
     </div>
-    <div class="card mycard1">
-      <img src="../images/img16.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">DAN BROWN</h5>
-        <p class="card-text">Daniel Gerhard Brown is an American author best known for his thriller novels, including the Robert Langdon novels Angels & Demons, The Da Vinci Code, The Lost Symbol, Inferno and Origin. His novels are treasure hunts that usually take place over a period of 24 hours.The author of numerous #1 bestselling novels, including The Da Vinci Code, which has become one of the best selling novels of all time as well as the subject of intellectual debate among readers and scholars. Browns novels are published in 52 languages around the world with 200 million copies in print.
-        </p>
-        <a href="https://en.wikipedia.org/wiki/Dan_Brown" class="btn btn-primary">Read More</a>
-      </div>
-    </div>
-    <div class="card mycard1">
-      <img src="../images/img14.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">J K ROWLING</h5>
-        <p class="card-text">Joanne Rowling CH, OBE, HonFRSE, FRCPE, FRSL, better known by her pen name J. K. Rowling, is a British author, film producer, television producer, screenwriter, and philanthropist.In 2012, Forbes removed Rowling from their rich list, claiming that her US$160 million in charitable donations and the high tax rate in the UK meant she was no longer a billionaire. ... She also writes crime fiction under the name Robert Galbraith.In 1995, Rowling finished her manuscript for Harry Potter and the Philosopher's Stone which was typed on an old manual typewriter.</p>
-        <a href="https://en.wikipedia.org/wiki/J._K._Rowling" class="btn btn-primary">Read More</a>
+        <div class="col-md-8">
+        <div class="card-body">
+        <h5 class="card-title"><%=authors[i].title%></h5>
+        <p class="card-text"><%=authors[i].description%></p>
+        <a href="/authors/<%=i%>" class="btn btn-primary">Read More</a>
       </div>
     </div>
   </div>
-  </div>
+</div>
+</div>
+<%}%>
+</div>
 
-  <div class="container">
-    <div class="card-deck">
-      <div class="card mycard1">
-        <img src="../images/img18.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">ANTON CHEKHOV</h5>
-          <p class="card-text">Russian writer Anton Chekhov is recognized as a master of the modern short story and a leading playwright of the late 19th and early 20th centuries.The majority of Chekhov's stories are written in the narrative, omniscient point of view. The advantage to the reader this style provides is knowing the thoughts, feelings and actions of all characters.The Steppe, Ward No. 6, Uncle Vanya, The Cherry Orchard, Three Sisters, On Trial, The Darling, The Bet, Vanka, After the Theatre and many more (Unabridged): Plays, Short Stories, Novel and A Biography are the popular works.</p>
-          <a href="https://en.wikipedia.org/wiki/Anton_Chekhov" class="btn btn-primary">Read More</a>
-        </div>
-      </div>
-      <div class="card mycard1">
-        <img src="../images/img19.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">MARGARET ATWOOD</h5>
-          <p class="card-text">Margaret Atwood is a Canadian writer best known for her prose fiction and for her feminist perspective. Role reversal and new beginnings are recurrent themes in her novels, all of them centred on women seeking their relationship to the world and the individuals around them. In her novels, short stories and even poetry uses a similar style of writing.Using parallelism and symbolism as springboards, Margaret Atwood writes to inform and perhaps warn her reader of the exploitation of women and sometimes even helpless men who exist within a society.
-          </p>
-          <a href="https://en.wikipedia.org/wiki/Margaret_Atwood" class="btn btn-primary">Read More</a>
-        </div>
-      </div>
-      <div class="card mycard1">
-        <img src="../images/img15.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">STEPHEN KING</h5>
-          <p class="card-text">Stephen Edwin King is an American author of horror, supernatural fiction, suspense, and fantasy novels. His books have sold more than 350 million copies, many of which have been adapted into films, television series, miniseries, and comic books.Salem's Lot is one of King's best works to date. This book presents a disturbing tale of vampires and how a local outcast is a town's only hope for stopping them. This was King's second novel. It proved to be a best-selling book for its time back in 1975.He was made to write stories and love to write stories. </p>
-          <a href="https://en.wikipedia.org/wiki/Stephen_King" class="btn btn-primary">Read More</a>
-        </div>
-      </div>
-    </div>
-    </div>
     
 <div class="container-fluid"> <br><br><br>
   <div class="footer" style="background-color:rgb(8, 4, 70); padding-top:7px; padding-bottom:6px;">
@@ -118,11 +76,12 @@
   <i class="fa fa-3x fa-github" style="font-size:px" href="https://github.com";> </i> 
   <i class="fa fa-3x fa-wordpress" style="font-size:px" href="http://wordpress.org";> </i>
   <i class="fa fa-3x fa-telegram" style="font-size:px" href="https://telegram.me/MSR72";> </i>
-    <h6 style="font-size: 15px";>Assignment Submission-Library Management© 2020<a href="http://programmerscamp.ir"></a></h6>
+    <h6 style="font-size: 15px";>Assignment Submission-Library App© 2020<a href="http://programmerscamp.ir"></a></h6>
 
   </div>
  </div>
   </div>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>       
 <script src="/js/bootstrap.min.js"></script>
 </body>
 </html>  
