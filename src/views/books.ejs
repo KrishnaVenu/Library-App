@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%=title%></title>
-    <link rel="icon" href="/images/icon.png" type="image/gif" sizes="32*32">
+    <link rel="icon" href="/images/icon.png" type="image/gif" sizes="60*60">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/style3.css">
 </head>
@@ -38,41 +38,30 @@
   </div>
   </nav> 
     
-      
-    
-
 <div class="container">
   <h1>BOOKS</h1>
 </div>
-
 <div class="container">
-  <div class="card-deck">
-    <%for(i=0;i<books.length;i++){%>  
-    <div class="card mycard2">
-      <img src="/images/<%=books[i].img%>" class="card-img-top" alt="...">
-      <div class="card-body">
+  <%for(i=0;i<books.length;i++){%> 
+  <div class="mycard2">
+        <div class="card mb-12" style="max-width: 100%;">
+         <div class="row no-gutters">
+        <div class="col-md-3">
+        <img src="/images/<%=books[i].img%>" class="card-img rounded-circle" alt="...">
+    </div>
+        <div class="col-md-8">
+        <div class="card-body">
         <h5 class="card-title"><%=books[i].title%></h5>
         <p class="card-text"><%=books[i].description%></p>
         <a href="/books/<%=i%>" class="btn btn-primary">Read More</a>
       </div>
     </div>
-    <%}%>
   </div>
-  </div>
-  <div class="container">
-    <div class="card-deck">
-      <%for(i=0;i<books2.length;i++){%>  
-      <div class="card mycard2">
-        <img src="/images/<%=books2[i].img%>" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title"><%=books2[i].title%></h5>
-          <p class="card-text"><%=books2[i].description%></p>
-          <a href="/books/<%=i%>" class="btn btn-primary">Read More</a>
-        </div>
-      </div>
-      <%}%>
-    </div>
-    </div>
+</div>
+</div>
+<%}%>
+</div>
+
 <div class="container-fluid"> <br><br><br>
   <div class="footer" style="background-color:rgb(8, 4, 70); padding-top:7px; padding-bottom:6px;">
     <i class="fa fa-3x fa-instagram" href="https://www.instagram.com/msroholahi/";></i>
