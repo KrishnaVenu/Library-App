@@ -6,13 +6,26 @@
     <title><%=title%></title>
     <link rel="icon" href="/images/icon.png" type="image/gif" sizes="32*32">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/style3.css">
+    <link rel="stylesheet" href="/css/book.css">
+    <style>
+     
+p{
+  font-family: cursive;
+  color: rgb(192, 41, 124);
+  padding: 20px;
+margin: 5px;
+text-indent: 100px;
+}
+
+
+    </style>
 </head>
 <body>
+ 
     <nav class="navbar navbar-expand-lg navbar-light bg-dark">
         <nav class="navbar navbar-light bg-dark navbar-dark">
                 <a class="navbar-brand" href="">
-                <img src="/images/icon.png" width="30" height="30"class="d-inline-block align-top"alt="">LIBRARY MANAGEMENT</a>
+                <img src="/images/icon.png" width="40" height="40"class="d-inline-block align-top"alt="">LIBRARY MANAGEMENT</a>
         </nav>
         </nav>
         <nav class="navbar navbar-expand-lg navbar-dark bg-info">
@@ -37,6 +50,28 @@
           </div>
       </div>
       </nav> 
+
+      <div class="container">
+            <h1>BOOK</h1>
+      </div>
+   <div class="container">
+          <div class="mycard">
+           <div class="card mb-12" style="max-width: 100%;">
+            <div class="row no-gutters">
+            <div class="col-md-3">
+              <img src="/images/<%=book.img%>" class="card-img rounded-circle" alt="...">
+         </div>
+              <div class="col-md-8">
+               <div class="card-body">
+                <h5 class="card-title"><%=book.title%></h5>
+                <p class="card-text"><%=book.description%></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+      
       <div class="container-fluid"> <br><br><br>
         <div class="footer" style="background-color:rgb(8, 4, 70); padding-top:7px; padding-bottom:6px;">
           <i class="fa fa-3x fa-instagram" href="https://www.instagram.com/msroholahi/";></i>
