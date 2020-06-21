@@ -1,7 +1,4 @@
-
-    
-    
-    body {
+ body {
         background: linear-gradient(132deg, #ec5218, #1665c1);
         background-size: 400% 400% ;
         animation: BackgroundGradient 30s ease infinite;
@@ -25,7 +22,7 @@ h1{
   padding: 10px;
   margin: 10%;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman',sans-serif ;
-  font-size: 500%;
+  font-size: 600%;
   color: white;
   letter-spacing: 10px;
   text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px rgb(8, 248, 48);
@@ -33,15 +30,20 @@ h1{
 
 h5{
   text-align: center;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-size: 15px;
-  letter-spacing: 4px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 150%;
+  letter-spacing: 2px;
   padding: 10px;
-  background-color: lightsalmon;
-  color: darkmagenta;
-   border: 2px solid ;
+   color: rgb(17, 2, 104);
    margin: 5px;
    font-weight: bold;
+}
+p{
+  font-family: cursive;
+  color: rgb(100, 6, 80);
+  padding: 20px;
+  margin: 5px;
+  text-indent: 100px;
 }
 .mycard2{
   text-align:justify;
@@ -75,3 +77,6 @@ h5{
   #navbar li.nav-item a:hover {
     color:#fff;
   }
+    
+    
+   
