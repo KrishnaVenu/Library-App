@@ -8,9 +8,17 @@ const nav = [
         link:'/registration',name:'Sign Up'
     }
 ];
-const homeRouter = require("./src/routes/homeRoutes")(nav);
-const authorsRouter = require("./src/routes/authorRoutes")(nav);
-const booksRouter = require("./src/routes/bookRoutes")(nav);
+const nav2 =[
+    {
+        link:'/authors',name:'Authors'
+    },
+    {
+        link:'/books',name:'Books'
+    }
+];
+const homeRouter = require("./src/routes/homeRoutes")(nav2);
+const authorsRouter = require("./src/routes/authorRoutes")(nav2);
+const booksRouter = require("./src/routes/bookRoutes")(nav2);
 app.use(express.static('./public'));
 app.set("view engine","ejs");
 app.set("views","./src/views");
@@ -38,5 +46,6 @@ app.get('/registration',function(req,res){
         title:'V.K.Library-Registration'
     });
 });
+
 
 app.listen(3222);
