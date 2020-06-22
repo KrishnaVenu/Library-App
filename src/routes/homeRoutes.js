@@ -1,12 +1,4 @@
 const express =require('express');
-const nav2 =[
-    {
-        link:'/authors',name:'Authors'
-    },
-    {
-        link:'/books',name:'Books'
-    }
-];
 const homeRouter = express.Router();
 function router(nav2){
     homeRouter.get('/',function(req,res){
