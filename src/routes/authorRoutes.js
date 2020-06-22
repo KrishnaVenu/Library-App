@@ -1,6 +1,6 @@
 const express =require('express');
 const authorsRouter = express.Router();
-function router(nav){
+function router(nav2){
 var authors = [
     {
         title: 'JANE AUSTEN',
@@ -35,7 +35,7 @@ var authors = [
 ]
 authorsRouter.get('/',function(req,res){
     res.render("authors",{
-        nav:[{link:'/authors',name:'Authors'},{link:'/books',name:'Books'}],
+        nav2,
         title:' V.K.Library-Authors',
         authors 
     });
@@ -43,7 +43,7 @@ authorsRouter.get('/',function(req,res){
 authorsRouter.get('/:id',function(req,res){
      const id = req.params.id
      res.render('author',{
-        nav:[{link:'/authors',name:'Authors'},{link:'/books',name:'Books'}],
+         nav2,
         title:' V.K.Library-Authors',
         author:authors[id]
         
