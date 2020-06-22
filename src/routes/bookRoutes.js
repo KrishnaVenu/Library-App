@@ -1,6 +1,6 @@
 const express =require('express');
 const booksRouter = express.Router();
-function router(nav){
+function router(nav2){
     var books = [
         {
                 title: 'LOLITHA',
@@ -35,7 +35,7 @@ function router(nav){
 ]
          booksRouter.get('/',function(req,res){
             res.render("books",{
-                nav:[{link:'/authors',name:'Authors'},{link:'/books',name:'Books'}],
+                    nav2,
                 title:' V.K.Library-Books',
                 books 
             });
@@ -43,7 +43,7 @@ function router(nav){
         booksRouter.get('/:id',function(req,res){
              const id = req.params.id
              res.render('book',{
-                nav:[{link:'/authors',name:'Authors'},{link:'/books',name:'Books'}],
+                     nav2,
                 title:' V.K.Library-Books',
                 book:books[id]
                 
@@ -53,6 +53,8 @@ function router(nav){
 }
 
 module.exports = router;
+
+
 
 
 
