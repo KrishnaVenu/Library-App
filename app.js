@@ -1,5 +1,4 @@
 const express =require('express');
-const homeRouter = express.Router();
 const app = express();
 const nav = [
     {
@@ -9,6 +8,7 @@ const nav = [
         link:'/registration',name:'Sign Up'
     }
 ];
+const homeRouter = require("./src/routes/homeRoutes")(nav);
 const authorsRouter = require("./src/routes/authorRoutes")(nav);
 const booksRouter = require("./src/routes/bookRoutes")(nav);
 app.use(express.static('./public'));
@@ -38,14 +38,5 @@ app.get('/registration',function(req,res){
         title:'V.K.Library-Registration'
     });
 });
-//function router(nav){
-homeRouter.get('/',function(req,res){
-    res.render("home",
-    {
-        
-     nav:[{link:'/authors',name:'Authors'},{link:'/books',name:'Books'}],
-        title:'V.K.Library'
-    });
-});
-//}
+
 app.listen(3222);
