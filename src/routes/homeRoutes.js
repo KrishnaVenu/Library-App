@@ -9,4 +9,6 @@ function router(nav){
             title:'V.K.Library'
         });
     });
-}    
+    return homeRouter;
+}
+module.exports = router;   
