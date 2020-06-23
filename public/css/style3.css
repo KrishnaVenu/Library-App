@@ -71,6 +71,8 @@ p{
   #navbar li.nav-item a:hover {
     color:#fff;
   }
-    
+ .navbar-brand{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}   
     
    
