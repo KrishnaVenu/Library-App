@@ -12,6 +12,9 @@
   #navbar li.nav-item a:hover {
     color:#fff;
   }
+.navbar-brand{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
   body{
      
      background: url(https://www.gibbsgardens.com/wp-content/uploads/2015/07/Japanese-Gardens-Nov.-17-2013-e1508280031782.jpg);
