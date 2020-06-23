@@ -12,11 +12,9 @@
 #navbar li.nav-item a:hover {
   color:#fff;
 }
-
-
-
-
-
+.navbar-brand{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 
 body {
     background: url(https://media.giphy.com/media/kxEkARh2ox104/giphy.gif);
